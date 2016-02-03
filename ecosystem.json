@@ -1,0 +1,47 @@
+{
+  /**
+   * Application configuration section
+   * http://pm2.keymetrics.io/docs/usage/application-declaration
+   */
+  apps: [
+
+    // First application
+    {
+      name: "hapi-adventure",
+      script: "server.js",
+      env: {
+        COMMON_VARIABLE: "true"
+      },
+      env_production: {
+        NODE_ENV: "production"
+      }
+    }
+
+  ],
+
+  /**
+   * Deployment section
+   * http://pm2.keymetrics.io/docs/usage/deployment
+   */
+  deploy: {
+    production: {
+      user: "admin",
+      host: "128.199.108.122",
+      ref: "origin/master",
+      repo: "https://github.com/agnium-academy/agnium-hapi-adventure.git",
+      path: "/var/www/hapi.agnium.co.id",
+      "post-deploy": "npm install ; pm2 startOrRestart ecosystem.json --env production"
+    },
+    dev: {
+      user: "admin",
+      host: "128.199.108.122",
+      ref: "origin/master",
+      repo: "https://github.com/agnium-academy/agnium-hapi-adventure.git",
+      path: "/var/www/dev.hapi.agnium.co.id",
+      "post-deploy": "npm install ; pm2 startOrRestart ecosystem.json --env dev",
+      env: {
+        NODE_ENV: "dev"
+      }
+    }
+  }
+}
