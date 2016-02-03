@@ -24,13 +24,13 @@
    * http://pm2.keymetrics.io/docs/usage/deployment
    */
   deploy: {
-    production: {
-      user: "admin",
-      host: "128.199.108.122",
+    personal: {
+      user: "root",
+      host: "128.199.216.87",
       ref: "origin/master",
       repo: "https://github.com/agnium-academy/agnium-hapi-adventure.git",
-      path: "/var/www/hapi.agnium.co.id",
-      "post-deploy": "npm install ; pm2 startOrRestart ecosystem.json --env production"
+      path: "/var/www/camper.mhaidarhanif.com",
+      "post-deploy": "npm install ; pm2 startOrRestart ecosystem.json --env personal"
     },
     dev: {
       user: "admin",
@@ -42,6 +42,14 @@
       env: {
         NODE_ENV: "dev"
       }
+    },
+    production: {
+      user: "admin",
+      host: "128.199.108.122",
+      ref: "origin/master",
+      repo: "https://github.com/agnium-academy/agnium-hapi-adventure.git",
+      path: "/var/www/hapi.agnium.co.id",
+      "post-deploy": "npm install ; pm2 startOrRestart ecosystem.json --env production"
     }
   }
 }
