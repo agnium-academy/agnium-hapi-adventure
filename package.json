@@ -2,13 +2,13 @@
   "name": "agnium-hapi-adventure",
   "version": "0.1.0",
   "description": "Agnium Hapi Adventure",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/agnium-trainer/agnium-hapi-adventure.git"
+    "url": "git+ssh://git@github.com/agnium-academy/agnium-hapi-adventure.git"
   },
   "keywords": [
     "agnium",
