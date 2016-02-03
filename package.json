@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/agnium-trainer/agnium-hapi-adventure/issues"
   },
-  "homepage": "https://github.com/agnium-trainer/agnium-hapi-adventure#readme"
+  "homepage": "https://github.com/agnium-trainer/agnium-hapi-adventure#readme",
+  "dependencies": {
+    "hapi": "13.0.0"
+  }
 }
