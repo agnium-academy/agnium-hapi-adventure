@@ -25,12 +25,13 @@
   },
   "homepage": "https://github.com/agnium-trainer/agnium-hapi-adventure#readme",
   "dependencies": {
-    "hapi": "13.0.0",
+    "boom": "3.1.1",
     "good": "6.4.0",
     "good-console": "5.2.0",
-    "joi": "7.2.0",
-    "inert": "3.2.0",
+    "hapi": "13.0.0",
     "hoek": "3.0.4",
-    "boom": "3.1.1"
+    "inert": "3.2.0",
+    "joi": "7.2.0",
+    "vision": "4.0.1"
   }
 }
