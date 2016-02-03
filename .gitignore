@@ -429,4 +429,4 @@ zeus.json
 *.mp4
 *.mp3
 
-secrets/
+*secrets*
